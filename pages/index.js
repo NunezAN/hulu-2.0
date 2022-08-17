@@ -30,7 +30,8 @@ export async function getServerSideProps(context) {
       requests[genre]?.url || requests.fetchTrending.url
     }`
   ).then((res) => res.json());
-    console.log(request)
+    console.log(request.results);
+    
   return{
     props:{
       results: request.results,
